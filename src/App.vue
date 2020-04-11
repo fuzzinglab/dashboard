@@ -1,14 +1,28 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+  <div id="app" class="flex flex-row min-h-screen">
+    <sidebar></sidebar>
     <router-view />
   </div>
 </template>
 
+<script>
+import Sidebar from "@/components/Sidebar";
+
+export default {
+  components: {
+    Sidebar
+  }
+};
+</script>
+
 <style>
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+
+@tailwind utilities;
+
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -27,5 +41,9 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+.icon {
+  @apply stroke-current;
 }
 </style>

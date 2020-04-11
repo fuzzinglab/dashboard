@@ -1,6 +1,9 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
+import VueIcon from "vue-icon";
+
+Vue.use(VueIcon, "v-icon");
 
 Vue.config.productionTip = false;
 
