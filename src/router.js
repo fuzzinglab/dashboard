@@ -1,6 +1,8 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
+import Fuzzers from "./views/Fuzzers.vue";
+import Fuzzer from "./views/Fuzzer.vue";
 
 Vue.use(Router);
 
@@ -18,13 +20,18 @@ export default new Router({
       }
     },
     {
-      path: "/fuzz",
-      name: "fuzz",
-      component: Home,
+      path: "/fuzzer",
+      name: "fuzzers",
+      component: Fuzzers,
       meta: {
         icon: "cpu",
         name: "Fuzzers"
       }
+    },
+    {
+      path: "/fuzzer/:id",
+      name: "Fuzzer",
+      component: Fuzzer
     }
   ]
 });

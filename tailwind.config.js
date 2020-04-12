@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       colors: {
         primary: colors.purple["700"],
-        secondary: colors.purple["900"]
+        secondary: colors.purple["900"],
+        background: colors.gray["300"]
       }
     }
   },
